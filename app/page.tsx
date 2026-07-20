@@ -2,7 +2,9 @@ import { HeroSection } from "@/components/hero-section";
 import { ServiceCard } from "@/components/service-card";
 import { CTASection } from "@/components/cta-section";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
+import { JsonLd } from "@/components/json-ld";
 import { services } from "@/lib/services-data";
+import { getPageMetadata, getPageJsonLd } from "@/lib/seo";
 import {
   Shield,
   Clock,
@@ -14,6 +16,8 @@ import {
   Wrench,
   CheckCircle,
 } from "lucide-react";
+
+export const metadata = getPageMetadata("home");
 
 const whyChooseUs = [
   {
@@ -89,6 +93,7 @@ const howItWorks = [
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={getPageJsonLd("home")} />
       {/* Hero Section */}
       <HeroSection
         title="Professional Handyman & Technical Services in Dubai"

@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { HeroSection } from "@/components/hero-section";
 import { CTASection } from "@/components/cta-section";
+import { JsonLd } from "@/components/json-ld";
+import { getPageMetadata, getPageJsonLd } from "@/lib/seo";
 import {
   Target,
   Eye,
@@ -15,11 +16,7 @@ import {
   ThumbsUp,
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "About Us",
-  description:
-    "Learn about Smart Fixora Technical Services - your trusted partner for professional handyman and technical services in Dubai since 2014.",
-};
+export const metadata = getPageMetadata("about");
 
 const stats = [
   { label: "Years Experience", value: "10+" },
@@ -58,6 +55,7 @@ const values = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={getPageJsonLd("about")} />
       {/* Hero - no CTA buttons */}
       <HeroSection
         title="About Smart Fixora"

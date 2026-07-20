@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { Phone, CheckCircle, Shield, Clock, Award, Star, Users } from "lucide-react";
 import { HeroSection } from "@/components/hero-section";
 import { CTASection } from "@/components/cta-section";
 import { WhatsAppIcon } from "@/components/floating-buttons";
+import { JsonLd } from "@/components/json-ld";
 import { services, getServiceBySlug } from "@/lib/services-data";
+import { getServiceMetadata, getServiceJsonLd } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return services.map((service) => ({
@@ -17,15 +18,15 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
+}) {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) return {};
 
-  return {
-    title: `${service.title} in Dubai`,
+  return getServiceMetadata(slug, {
+    title: service.title,
     description: service.shortDescription,
-  };
+  });
 }
 
 const whyChooseFixora = [
@@ -75,6 +76,12 @@ export default async function ServicePage({
 
   return (
     <>
+      <JsonLd
+        data={getServiceJsonLd(slug, {
+          title: service.title,
+          description: service.shortDescription,
+        })}
+      />
       {/* Hero */}
       <HeroSection
         title={service.title}

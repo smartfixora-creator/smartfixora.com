@@ -1,18 +1,16 @@
-import type { Metadata } from "next";
 import { HeroSection } from "@/components/hero-section";
 import { ServiceCard } from "@/components/service-card";
 import { CTASection } from "@/components/cta-section";
+import { JsonLd } from "@/components/json-ld";
 import { services } from "@/lib/services-data";
+import { getPageMetadata, getPageJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Services",
-  description:
-    "Explore our comprehensive range of professional handyman and technical services in Dubai including AC repair, plumbing, electrical, painting, cleaning, and more.",
-};
+export const metadata = getPageMetadata("services");
 
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd data={getPageJsonLd("services")} />
       {/* Hero */}
       <HeroSection
         title="Our Professional Services"

@@ -18,27 +18,23 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
 });
 
+import { siteConfig } from "@/lib/seo"
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Smart Fixora Technical Services | Professional Handyman Services in Dubai",
-    template: "%s | Smart Fixora Technical Services",
+    default: siteConfig.defaultTitle,
+    template: siteConfig.titleTemplate,
   },
-  description:
-    "Smart Fixora Technical Services offers professional handyman, AC repair, plumbing, electrical, painting, cleaning, and maintenance services in Dubai. Call +971581289605.",
-  keywords: [
-    "handyman Dubai",
-    "technical services Dubai",
-    "AC repair Dubai",
-    "plumbing Dubai",
-    "electrical services Dubai",
-    "maintenance Dubai",
-    "Smart Fixora",
-  ],
+  description: siteConfig.defaultDescription,
+  keywords: [...siteConfig.defaultKeywords],
   openGraph: {
-    title: "Smart Fixora Technical Services",
+    title: siteConfig.name,
     description:
       "Professional handyman and technical services in Dubai. Quality work guaranteed.",
     type: "website",
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
   },
 };
 

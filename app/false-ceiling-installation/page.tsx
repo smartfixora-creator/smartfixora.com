@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { Phone, CheckCircle, Shield, Clock, Award, Star, Users, CircleDot, Layers, Zap, PaintBucket, Volume2 } from "lucide-react";
 import { HeroSection } from "@/components/hero-section";
 import { CTASection } from "@/components/cta-section";
 import { WhatsAppIcon } from "@/components/floating-buttons";
+import { JsonLd } from "@/components/json-ld";
+import { getPageMetadata, getPageJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "False Ceiling Installation in Dubai | Smart Fixora Technical Services",
-  description: "Professional false ceiling installation services in Dubai. Expert gypsum, POP, suspended, and decorative ceiling designs with LED integration. Licensed contractors, affordable rates, and quality workmanship.",
-};
+export const metadata = getPageMetadata("falseCeilingInstallation");
 
 const falseCeilingServices = [
   {
@@ -104,6 +102,7 @@ const whyChooseUs = [
 export default function FalseCeilingInstallationPage() {
   return (
     <>
+      <JsonLd data={getPageJsonLd("falseCeilingInstallation")} />
       {/* Hero */}
       <HeroSection
         title="False Ceiling Installation in Dubai"

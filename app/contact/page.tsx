@@ -1,13 +1,10 @@
-import type { Metadata } from "next";
 import { HeroSection } from "@/components/hero-section";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
+import { JsonLd } from "@/components/json-ld";
+import { getPageMetadata, getPageJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact Us",
-  description:
-    "Get in touch with Smart Fixora Technical Services in Dubai. Call +971581289605, email smartfixora@gmail.com, or visit our office in Business Bay.",
-};
+export const metadata = getPageMetadata("contact");
 
 const contactInfo = [
   {
@@ -39,6 +36,7 @@ const contactInfo = [
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={getPageJsonLd("contact")} />
       {/* Hero - no CTA buttons */}
       <HeroSection
         title="Contact Us"
