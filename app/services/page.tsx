@@ -5,6 +5,8 @@ import { JsonLd } from "@/components/json-ld";
 import { services } from "@/lib/services-data";
 import { getPageMetadata, getPageJsonLd } from "@/lib/seo";
 
+export const dynamic = "force-static";
+
 export const metadata = getPageMetadata("services");
 
 export default function ServicesPage() {
@@ -49,7 +51,7 @@ export default function ServicesPage() {
                 title={service.title}
                 shortDescription={service.shortDescription}
                 cardImage={service.cardImage}
-                iconName={service.icon.displayName || service.icon.name || "CircleDot"}
+                iconName={service.icon}
                 whatsappMessage={service.whatsappMessage}
               />
             ))}

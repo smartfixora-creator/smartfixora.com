@@ -8,6 +8,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { services } from "@/lib/services-data";
+import { ServiceIcon } from "@/lib/service-icons";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -145,7 +146,7 @@ export function SiteHeader() {
                             )}
                             onClick={() => setIsServicesOpen(false)}
                           >
-                            <service.icon className="h-4 w-4 text-brand shrink-0" />
+                            <ServiceIcon name={service.icon} className="h-4 w-4 text-brand shrink-0" />
                             <span>{service.title}</span>
                           </Link>
                         ))}
@@ -272,7 +273,7 @@ export function SiteHeader() {
                         : "text-muted-foreground",
                     )}
                   >
-                    <service.icon className="h-3.5 w-3.5 text-brand shrink-0" />
+                    <ServiceIcon name={service.icon} className="h-3.5 w-3.5 text-brand shrink-0" />
                     {service.title}
                   </Link>
                 ))}

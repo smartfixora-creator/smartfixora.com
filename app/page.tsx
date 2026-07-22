@@ -127,7 +127,7 @@ export default function HomePage() {
                 title={service.title}
                 shortDescription={service.shortDescription}
                 cardImage={service.cardImage}
-                iconName={service.icon.displayName || service.icon.name || "CircleDot"}
+                iconName={service.icon}
                 whatsappMessage={service.whatsappMessage}
               />
             ))}

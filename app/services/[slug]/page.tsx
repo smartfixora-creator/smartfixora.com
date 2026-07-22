@@ -6,7 +6,11 @@ import { CTASection } from "@/components/cta-section";
 import { WhatsAppIcon } from "@/components/floating-buttons";
 import { JsonLd } from "@/components/json-ld";
 import { services, getServiceBySlug } from "@/lib/services-data";
+import { ServiceIcon } from "@/lib/service-icons";
 import { getServiceMetadata, getServiceJsonLd } from "@/lib/seo";
+
+export const dynamic = "force-static";
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return services.map((service) => ({
@@ -133,7 +137,7 @@ export default async function ServicePage({
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   <div className="absolute bottom-3 left-3 flex h-10 w-10 items-center justify-center rounded-lg bg-brand shadow-md">
-                    <sub.icon className="h-5 w-5 text-brand-foreground" />
+                    <ServiceIcon name={sub.icon} className="h-5 w-5 text-brand-foreground" />
                   </div>
                 </div>
                 {/* Content */}
