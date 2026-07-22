@@ -9,9 +9,6 @@ import { services, getServiceBySlug } from "@/lib/services-data";
 import { ServiceIcon } from "@/lib/service-icons";
 import { getServiceMetadata, getServiceJsonLd } from "@/lib/seo";
 
-export const dynamic = "force-static";
-export const dynamicParams = false;
-
 export async function generateStaticParams() {
   return services.map((service) => ({
     slug: service.slug,

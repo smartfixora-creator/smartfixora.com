@@ -5,8 +5,6 @@ import { JsonLd } from "@/components/json-ld";
 import { services } from "@/lib/services-data";
 import { getPageMetadata, getPageJsonLd } from "@/lib/seo";
 
-export const dynamic = "force-static";
-
 export const metadata = getPageMetadata("services");
 
 export default function ServicesPage() {
