@@ -93,7 +93,7 @@ const howItWorks = [
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={getPageJsonLd("home")} />
+      <JsonLd id="json-ld-home" data={getPageJsonLd("home")} />
       {/* Hero Section */}
       <HeroSection
         title="Professional Handyman & Technical Services in Dubai"

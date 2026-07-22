@@ -36,7 +36,7 @@ const contactInfo = [
 export default function ContactPage() {
   return (
     <>
-      <JsonLd data={getPageJsonLd("contact")} />
+      <JsonLd id="json-ld-contact" data={getPageJsonLd("contact")} />
       {/* Hero - no CTA buttons */}
       <HeroSection
         title="Contact Us"

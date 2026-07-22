@@ -10,7 +10,7 @@ export const metadata = getPageMetadata("services");
 export default function ServicesPage() {
   return (
     <>
-      <JsonLd data={getPageJsonLd("services")} />
+      <JsonLd id="json-ld-services" data={getPageJsonLd("services")} />
       {/* Hero */}
       <HeroSection
         title="Our Professional Services"

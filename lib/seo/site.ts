@@ -1,6 +1,6 @@
 /** Site-wide defaults used by metadata + schema. Edit phone/address here once. */
 export const siteConfig = {
-  name: "Smart Fixora Technical Services",
+  name: "Smart Fixora Technical Services L.L.C",
   shortName: "Smart Fixora",
   url: "https://smartfixora.com",
   phone: "+971581289605",
@@ -14,22 +14,41 @@ export const siteConfig = {
     region: "Dubai",
     country: "AE",
   },
+  geo: {
+    latitude: 25.1815668,
+    longitude: 55.2715102,
+  },
+  openingHours: {
+    opens: "07:30",
+    closes: "22:00",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+  },
+  mapsUrl:
+    "https://www.google.com/maps/place/Smart+Fixora+Technical+Services+L.L.C/@25.1815668,55.2715102,17z",
   sameAs: [
-    // Add social profile URLs here when available
+    "https://www.google.com/maps/place/Smart+Fixora+Technical+Services+L.L.C/@25.1815668,55.2715102,17z",
   ] as string[],
-  titleTemplate: "%s | Smart Fixora Technical Services",
-  defaultTitle:
-    "Smart Fixora Technical Services | Professional Handyman Services in Dubai",
+  /** Keep short so page titles stay ~60 chars in SERP tools. */
+  titleTemplate: "%s | Smart Fixora",
+  // Meta: keywords only — no phone/email/address in title or description
+  defaultTitle: "Same-Day AC Duct Cleaning Al Barsha | Smart Fixora",
   defaultDescription:
-    "Smart Fixora Technical Services offers professional handyman, AC repair, plumbing, electrical, painting, cleaning, and maintenance services in Dubai. Call +971581289605.",
+    "Same-day AC duct cleaning for villas in Al Barsha, AC repair near me, waterproofing services, plumbing, electrical and home maintenance across Business Bay and Dubai.",
   defaultKeywords: [
-    "handyman Dubai",
-    "technical services Dubai",
-    "AC repair Dubai",
-    "plumbing Dubai",
-    "electrical services Dubai",
-    "maintenance Dubai",
-    "Smart Fixora",
+    "same-day AC duct cleaning Al Barsha Dubai",
+    "AC duct cleaning for villas Business Bay",
+    "AC repair near me Al Barsha",
+    "waterproofing services near me Dubai",
+    "home maintenance Al Barsha Dubai",
+    "duct cleaning near me Business Bay",
   ],
 } as const
 

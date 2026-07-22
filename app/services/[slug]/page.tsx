@@ -77,6 +77,7 @@ export default async function ServicePage({
   return (
     <>
       <JsonLd
+        id={`json-ld-service-${slug}`}
         data={getServiceJsonLd(slug, {
           title: service.title,
           description: service.shortDescription,

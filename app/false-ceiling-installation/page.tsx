@@ -102,7 +102,7 @@ const whyChooseUs = [
 export default function FalseCeilingInstallationPage() {
   return (
     <>
-      <JsonLd data={getPageJsonLd("falseCeilingInstallation")} />
+      <JsonLd id="json-ld-false-ceiling" data={getPageJsonLd("falseCeilingInstallation")} />
       {/* Hero */}
       <HeroSection
         title="False Ceiling Installation in Dubai"

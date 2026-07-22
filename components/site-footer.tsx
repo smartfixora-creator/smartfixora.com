@@ -113,7 +113,15 @@ export function SiteFooter() {
       <div className="border-t border-secondary-foreground/10">
         <div className="mx-auto max-w-7xl px-4 lg:px-8 py-6 flex flex-col items-center gap-2 text-center">
           <p className="text-xs text-secondary-foreground/50">
-            &copy; 2026 Smart Fixora Technical Services. All rights reserved | Developed by <a className="text-purple-500 font-bold" href="https://mindoxa.com">Mindoxa</a>
+            &copy; 2026 Smart Fixora Technical Services. All rights reserved | Developed by{" "}
+            <a
+              className="text-purple-500 font-bold"
+              href="https://siddigital.agency"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sidd Digital Marketing Agency
+            </a>
           </p>
         </div>
       </div>

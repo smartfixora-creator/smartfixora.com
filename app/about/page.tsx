@@ -55,7 +55,7 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      <JsonLd data={getPageJsonLd("about")} />
+      <JsonLd id="json-ld-about" data={getPageJsonLd("about")} />
       {/* Hero - no CTA buttons */}
       <HeroSection
         title="About Smart Fixora"
