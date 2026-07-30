@@ -182,6 +182,27 @@ export const pagesSeo = {
       "Gypsum false ceiling for villas in Al Barsha, POP false ceiling, suspended grid and LED cove lighting ceilings for apartments and offices in Business Bay Dubai.",
     ),
   },
+  privacyPolicy: {
+    title: "Privacy Policy",
+    description:
+      "Privacy Policy for Smart Fixora Technical Services L.L.C — how we collect, use, and protect your information when you use our Dubai website and technical services.",
+    path: "/privacy-policy",
+    keywords: [
+      "Smart Fixora privacy policy",
+      "technical services Dubai data privacy",
+      "Smart Fixora personal information policy",
+    ],
+    schema: {
+      "@type": "WebPage",
+      "@id": absoluteUrl("/privacy-policy"),
+      url: absoluteUrl("/privacy-policy"),
+      name: "Privacy Policy | Smart Fixora",
+      description:
+        "Privacy Policy for Smart Fixora Technical Services L.L.C — how we collect, use, and protect your information when you use our Dubai website and technical services.",
+      isPartOf: { "@id": `${siteConfig.url}/#website` },
+      about: { "@id": `${siteConfig.url}/#organization` },
+    },
+  },
 } as const satisfies Record<string, PageSeo>
 
 /**

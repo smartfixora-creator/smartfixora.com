@@ -57,6 +57,7 @@ export function SiteFooter() {
                 { label: "About Us", href: "/about" },
                 { label: "Our Services", href: "/services" },
                 { label: "Contact Us", href: "/contact" },
+                { label: "Privacy Policy", href: "/privacy-policy" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
